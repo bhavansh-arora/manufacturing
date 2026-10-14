@@ -84,7 +84,7 @@
   }
 
   // Sub-navigation highlights the section in view
-  const subLinks = $$(".subnav a");
+  const subLinks = $$(".subnav a, .guide__toc a");
   if (subLinks.length) {
     const map = new Map(subLinks.map((a) => [a.getAttribute("href").slice(1), a]));
     const spy = new IntersectionObserver((entries) => {
@@ -94,11 +94,31 @@
         const link = map.get(e.target.id);
         if (link) {
           link.classList.add("is-active");
-          link.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+          if (link.closest(".subnav")) link.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
         }
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     map.forEach((_, id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
+  }
+
+  // Lead-time estimator
+  const est = $("#estimator");
+  if (est) {
+    // Typical business days for 1–10 parts, and how much each volume tier adds.
+    const base = { cnc: [4, 6], sheet: [5, 7], mold: [18, 25], am: [2, 4] };
+    const volume = { cnc: [0, 2, 6, 12], sheet: [0, 2, 5, 10], mold: [0, 2, 4, 7], am: [0, 2, 6, 14] };
+    const update = () => {
+      const v = (n) => $(`input[name=${n}]:checked`, est).value;
+      const p = v("p");
+      const extra = volume[p][Number(v("q")) - 1] + Number(v("f")) + Number(v("i"));
+      const lo = base[p][0] + extra;
+      const hi = base[p][1] + extra;
+      $("#estDays").textContent = `${lo} to ${hi}`;
+      $("#estFa").textContent = p === "mold" ? `T1 samples, day ${base.mold[0] - 3}` : `day ${Math.max(2, base[p][0] - 1 + Number(v("i")))}`;
+      $("#estExp").textContent = `from ${Math.max(2, Math.round(lo * 0.6))} days`;
+    };
+    est.addEventListener("change", update);
+    update();
   }
 
   // Portfolio filters

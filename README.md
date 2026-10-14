@@ -6,13 +6,14 @@ A static, dependency-free multipage site for **Torvane**, a fictional precision 
 
 | Page | File | What's on it |
 | --- | --- | --- |
-| Home | `index.html` | Hero, stats, certifications, capability cards, featured work, process, comparison table, testimonials |
-| Capabilities | `capabilities.html` | CNC, sheet metal & welding, molding, additive, finishing, assembly, materials |
-| Work | `work.html` | Filterable project portfolio with lightbox, case studies |
-| Industries | `industries.html` | Aerospace, medical, EV, robotics, semiconductor, industrial |
-| Quality | `quality.html` | KPIs, inspection lab, certifications |
-| About | `about.html` | Timeline, facility, values, leadership, careers |
-| Get a quote | `quote.html` | Multi-step quote form, contact options, FAQ |
+| Home | `index.html` | Hero, pain points, capability cards, lead-time estimator, featured work, process, order-tracking preview, comparison, testimonials, guides |
+| Capabilities | `capabilities.html` | Six processes with specs, materials, pricing factors, equipment list |
+| Work | `work.html` | Stats, filterable portfolio with lightbox, three detailed case studies |
+| Industries | `industries.html` | Six industries, per-industry requirements, customer quote |
+| Quality | `quality.html` | KPIs, five-step quality process, inspection lab, certifications, documentation, guarantee |
+| Design guides | `guides.html` | DFM rules for CNC, sheet metal, molding, additive; tolerances, finishes, glossary |
+| About | `about.html` | Timeline, facility, values, leadership, sustainability, open roles and benefits |
+| Get a quote | `quote.html` | Quote form, contact options, next steps, RFQ checklist, FAQ |
 | Photo credits | `credits.html` | Source and license for every photo |
 
 ## Run locally
@@ -25,7 +26,7 @@ python3 -m http.server 8000
 ## Files
 
 - `styles.css` — design tokens and all styles (responsive down to 360px, respects reduced motion)
-- `script.js` — scroll reveals, counters, mobile menu, portfolio filters and lightbox, parallax, multi-step quote form
+- `script.js` — scroll reveals, counters, mobile menu, portfolio filters and lightbox, parallax, multi-step quote form, lead-time estimator
 - `assets/` — logo mark, wordmark, favicon (SVG) and `img/` photography
 
 The header and footer are repeated in each HTML file, so edit them on every page when you change navigation or contact details.

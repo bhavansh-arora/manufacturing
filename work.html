@@ -30,6 +30,7 @@
         <a href="work.html" class="is-active" aria-current="page">Work</a>
         <a href="industries.html">Industries</a>
         <a href="quality.html">Quality</a>
+        <a href="guides.html">Guides</a>
         <a href="about.html">About</a>
       </nav>
       <div class="nav__cta">
@@ -45,6 +46,7 @@
         <a href="work.html" class="is-active" aria-current="page">Work</a>
         <a href="industries.html">Industries</a>
         <a href="quality.html">Quality</a>
+        <a href="guides.html">Guides</a>
         <a href="about.html">About</a>
       <a href="quote.html" class="btn btn--primary">Get a quote in 24h</a>
     </div>
@@ -62,6 +64,12 @@
 
     <section class="section" style="padding-top: 72px">
       <div class="container">
+        <div class="kpis" style="margin-bottom:56px">
+          <div class="kpi reveal"><b>31,000+</b><span>Orders delivered since 2015</span></div>
+          <div class="kpi reveal"><b>8,400</b><span>Active part numbers in production</span></div>
+          <div class="kpi reveal"><b>42</b><span>Countries we ship to</span></div>
+          <div class="kpi reveal"><b>94%</b><span>Customers who reorder within a year</span></div>
+        </div>
         <div class="filters reveal" role="group" aria-label="Filter projects">
           <button class="filter is-on" data-filter="all" aria-pressed="true">All work</button>
           <button class="filter" data-filter="aerospace" aria-pressed="false">Aerospace</button>
@@ -137,32 +145,85 @@
       </div>
     </div>
 
-    <section class="section section--alt">
+    <section class="section section--alt" id="case-studies">
       <div class="container">
         <div class="section__head">
           <p class="kicker reveal">Case studies</p>
           <h2 class="reveal">Outcomes, <em>not just parts.</em></h2>
+          <p class="section__lede reveal">Three programs, three industries, one approach: engineer first, then build.</p>
         </div>
-        <div class="cases">
-          <article class="case reveal">
-            <div class="case__tag">Aerospace · Tier 1 supplier</div>
-            <div class="case__metric"><b>41%</b><span>lower unit cost</span></div>
-            <p>Consolidated a 23-part titanium actuator housing from four vendors into one Torvane program, with DFM changes that eliminated two setups.</p>
-            <div class="case__meta"><span>5-axis CNC</span><span>Ti-6Al-4V</span><span>AS9100D</span></div>
-          </article>
-          <article class="case reveal">
-            <div class="case__tag">Medical devices · Surgical robotics</div>
-            <div class="case__metric"><b>6 wks</b><span>faster to clinical build</span></div>
-            <p>Delivered 340 validated instrument components with full ISO 13485 documentation packages ahead of an FDA submission deadline.</p>
-            <div class="case__meta"><span>Swiss turning</span><span>316L</span><span>Passivation</span></div>
-          </article>
-          <article class="case reveal">
-            <div class="case__tag">EV &amp; Mobility · Battery systems</div>
-            <div class="case__metric"><b>0 PPM</b><span>defects across 180k units</span></div>
-            <p>Scaled busbar and enclosure production from 500 prototypes to 180,000 units per year without a single line-down event.</p>
-            <div class="case__meta"><span>Sheet metal</span><span>C110 Copper</span><span>IATF 16949</span></div>
-          </article>
-        </div>
+
+        <article class="cs">
+          <div class="cs__media reveal"><img src="assets/img/turbine-cone.jpg" alt="Jet engine nose cone and fan blades" loading="lazy" /><span class="case__tag">Aerospace · Tier 1 supplier</span></div>
+          <div>
+            <h3 class="reveal">Consolidating a 23-part titanium actuator from four vendors into one</h3>
+            <div class="cs__results reveal">
+              <div><b>41%</b><span>lower unit cost</span></div>
+              <div><b>4 → 1</b><span>suppliers</span></div>
+              <div><b>11 wks</b><span>shorter lead time</span></div>
+            </div>
+            <h4>The challenge</h4>
+            <p class="reveal">A Tier 1 flight-controls supplier was buying the housing, cover and 21 small parts of an actuator assembly from four shops. Mismatched tolerances between vendors caused a 6% assembly rejection rate, and lead times had stretched to 22 weeks.</p>
+            <h4>Our approach</h4>
+            <ul class="reveal">
+              <li>Full DFM review of the assembly, not just individual parts</li>
+              <li>Redesigned the housing datums so it could be machined in two setups instead of four</li>
+              <li>Moved the program to a dedicated 5-axis cell with in-process probing</li>
+              <li>AS9102 first-article inspection and delivered as a kitted, serialized assembly</li>
+            </ul>
+            <h4>The result</h4>
+            <p class="reveal">Assembly rejections fell to zero over 18 months. The customer now sends every new actuator program to Torvane at the design stage.</p>
+            <blockquote class="reveal">"We used to reconcile four sets of inspection data. Now there's one, and it's always right."<cite>Director of Supply Chain, flight-controls supplier</cite></blockquote>
+          </div>
+        </article>
+
+        <article class="cs">
+          <div class="cs__media reveal"><img src="assets/img/cmm-probe.jpg" alt="CMM probe inspecting a precision part" loading="lazy" /><span class="case__tag">Medical · Surgical robotics</span></div>
+          <div>
+            <h3 class="reveal">340 validated instrument parts, six weeks ahead of an FDA deadline</h3>
+            <div class="cs__results reveal">
+              <div><b>6 wks</b><span>ahead of schedule</span></div>
+              <div><b>340</b><span>validated components</span></div>
+              <div><b>100%</b><span>first-pass yield on FAI</span></div>
+            </div>
+            <h4>The challenge</h4>
+            <p class="reveal">A surgical robotics startup needed production-equivalent instrument components for a clinical build. Their previous supplier couldn't provide process validation or ISO 13485 documentation.</p>
+            <h4>Our approach</h4>
+            <ul class="reveal">
+              <li>IQ/OQ/PQ process validation on Swiss-type lathes</li>
+              <li>Passivation and ultrasonic cleaning validated for 316L</li>
+              <li>Clean-room packaging with lot-level device history records</li>
+              <li>Weekly engineering calls through the clinical build</li>
+            </ul>
+            <h4>The result</h4>
+            <p class="reveal">Parts shipped six weeks early with a complete documentation package. The submission went in on schedule and the customer moved production to Torvane.</p>
+            <blockquote class="reveal">"They treated our deadline like it was theirs."<cite>VP Engineering, surgical robotics company</cite></blockquote>
+          </div>
+        </article>
+
+        <article class="cs">
+          <div class="cs__media reveal"><img src="assets/img/pcb.jpg" alt="Electronics control board macro" loading="lazy" /><span class="case__tag">EV &amp; Mobility · Battery systems</span></div>
+          <div>
+            <h3 class="reveal">Scaling busbars and enclosures from 500 prototypes to 180,000 a year</h3>
+            <div class="cs__results reveal">
+              <div><b>0 PPM</b><span>defects at volume</span></div>
+              <div><b>360×</b><span>volume increase</span></div>
+              <div><b>0</b><span>line-down events</span></div>
+            </div>
+            <h4>The challenge</h4>
+            <p class="reveal">An EV battery maker needed copper busbars and aluminum enclosures that could move from prototype to start of production in nine months, with automotive-grade quality from day one.</p>
+            <h4>Our approach</h4>
+            <ul class="reveal">
+              <li>Built prototypes on production tooling so nothing changed at scale</li>
+              <li>Full PPAP Level 3 with Cpk ≥ 1.67 on critical features</li>
+              <li>Automated laser cutting, forming and vision inspection cell</li>
+              <li>Kanban replenishment straight to the customer's line</li>
+            </ul>
+            <h4>The result</h4>
+            <p class="reveal">Production ramped on schedule with zero defects shipped across 180,000 units in the first year, and no line-down events.</p>
+            <blockquote class="reveal">"The ramp was the boring part of our launch. That's the highest compliment I can give a supplier."<cite>Head of Hardware, EV battery company</cite></blockquote>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -199,6 +260,7 @@
         <a href="work.html">Our work</a>
         <a href="industries.html">Industries</a>
         <a href="quality.html">Quality &amp; certifications</a>
+        <a href="guides.html">Design guides</a>
         <a href="about.html">About &amp; careers</a>
         <a href="quote.html#faq">FAQ</a>
       </div>

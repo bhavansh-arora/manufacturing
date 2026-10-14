@@ -30,6 +30,7 @@
         <a href="work.html">Work</a>
         <a href="industries.html">Industries</a>
         <a href="quality.html">Quality</a>
+        <a href="guides.html">Guides</a>
         <a href="about.html">About</a>
       </nav>
       <div class="nav__cta">
@@ -45,6 +46,7 @@
         <a href="work.html">Work</a>
         <a href="industries.html">Industries</a>
         <a href="quality.html">Quality</a>
+        <a href="guides.html">Guides</a>
         <a href="about.html">About</a>
       <a href="quote.html" class="btn btn--primary">Get a quote in 24h</a>
     </div>
@@ -121,12 +123,30 @@
       </div>
     </section>
 
+    <!-- ================= PAINS ================= -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker reveal">01 / Sound familiar?</p>
+          <h2 class="reveal">Sourcing parts shouldn't be <em>the bottleneck.</em></h2>
+          <p class="section__lede reveal">We hear the same five stories from almost every engineering team before they switch. Here's how we fixed each one.</p>
+        </div>
+        <div class="pains">
+          <div class="pain reveal"><div class="pain__bad"><b>"We waited 9 days for a quote."</b><span>Then it came back with no feedback on why the price was high.</span></div><div class="pain__arrow" aria-hidden="true">→</div><div class="pain__good"><b>Quotes in 24 hours, with DFM notes</b><span>An engineer marks up your model with cost drivers and cheaper alternatives.</span></div></div>
+          <div class="pain reveal"><div class="pain__bad"><b>"Parts showed up out of spec."</b><span>And the supplier argued about whose CMM was right.</span></div><div class="pain__arrow" aria-hidden="true">→</div><div class="pain__good"><b>Inspected before they ship, guaranteed</b><span>Full inspection data in the box. Any miss is remade at our cost, no debate.</span></div></div>
+          <div class="pain reveal"><div class="pain__bad"><b>"Nobody tells us when it's late."</b><span>We find out the day it was supposed to arrive.</span></div><div class="pain__arrow" aria-hidden="true">→</div><div class="pain__good"><b>Live order tracking and a named PM</b><span>See every operation in the portal. If a date moves, you hear about it first.</span></div></div>
+          <div class="pain reveal"><div class="pain__bad"><b>"Our prototype shop can't do volume."</b><span>So we re-qualify a new supplier right before launch.</span></div><div class="pain__arrow" aria-hidden="true">→</div><div class="pain__good"><b>Prototype to 100k units, same team</b><span>The process you approved on unit one is the one that runs at scale.</span></div></div>
+          <div class="pain reveal"><div class="pain__bad"><b>"We manage six vendors for one assembly."</b><span>Six POs, six quality systems, six excuses.</span></div><div class="pain__arrow" aria-hidden="true">→</div><div class="pain__good"><b>Machining to box build under one roof</b><span>One PO, one quality system, one point of accountability.</span></div></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= CAPABILITIES ================= -->
     <section class="section">
       <div class="container">
         <div class="head-row">
           <div class="section__head">
-            <p class="kicker reveal">01 / Capabilities</p>
+            <p class="kicker reveal">02 / Capabilities</p>
             <h2 class="reveal">One partner. <em>Every process</em> your BOM needs.</h2>
             <p class="section__lede reveal">180,000 sq ft of in-house capacity means one PO, one quality system and one point of accountability.</p>
           </div>
@@ -162,12 +182,70 @@
       </div>
     </section>
 
+    <!-- ================= ESTIMATOR ================= -->
+    <section class="section section--alt" id="estimate">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker reveal">03 / Lead-time estimator</p>
+          <h2 class="reveal">How fast can you <em>have parts?</em></h2>
+          <p class="section__lede reveal">Pick your process, volume and finish for a realistic lead-time range based on 31,000 completed orders. Your quote confirms the exact date.</p>
+        </div>
+        <form class="estimator reveal" id="estimator" onsubmit="return false">
+          <div class="est__form">
+            <div class="est__group"><span>Process</span>
+              <div class="seg">
+                <label><input type="radio" name="p" value="cnc" checked /><span>CNC machining</span></label>
+                <label><input type="radio" name="p" value="sheet" /><span>Sheet metal</span></label>
+                <label><input type="radio" name="p" value="mold" /><span>Injection molding</span></label>
+                <label><input type="radio" name="p" value="am" /><span>Additive</span></label>
+              </div>
+            </div>
+            <div class="est__group"><span>Quantity</span>
+              <div class="seg">
+                <label><input type="radio" name="q" value="1" checked /><span>1 to 10</span></label>
+                <label><input type="radio" name="q" value="2" /><span>11 to 500</span></label>
+                <label><input type="radio" name="q" value="3" /><span>501 to 5,000</span></label>
+                <label><input type="radio" name="q" value="4" /><span>5,000+</span></label>
+              </div>
+            </div>
+            <div class="est__group"><span>Finish</span>
+              <div class="seg">
+                <label><input type="radio" name="f" value="0" checked /><span>As machined</span></label>
+                <label><input type="radio" name="f" value="3" /><span>Anodize</span></label>
+                <label><input type="radio" name="f" value="3" /><span>Powder coat</span></label>
+                <label><input type="radio" name="f" value="5" /><span>Plating</span></label>
+              </div>
+            </div>
+            <div class="est__group"><span>Inspection</span>
+              <div class="seg">
+                <label><input type="radio" name="i" value="0" checked /><span>Standard + CoC</span></label>
+                <label><input type="radio" name="i" value="1" /><span>AS9102 FAI</span></label>
+                <label><input type="radio" name="i" value="4" /><span>PPAP Level 3</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="est__out" aria-live="polite">
+            <span class="est__label">Estimated lead time</span>
+            <div class="est__big"><span id="estDays">5 to 7</span></div>
+            <span class="est__label" style="margin-top:-8px">business days</span>
+            <ul class="est__rows">
+              <li><span>Quote &amp; DFM review</span><b>within 24 h</b></li>
+              <li><span>First article ready</span><b id="estFa">day 4</b></li>
+              <li><span>Expedite available</span><b id="estExp">from 3 days</b></li>
+            </ul>
+            <a href="quote.html" class="btn btn--primary">Lock in this lead time →</a>
+            <p class="est__note">Estimates are typical ranges for parts up to 300 mm. Complex geometry, exotic materials or large volumes may change dates.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- ================= FEATURED WORK ================= -->
-    <section class="section section--alt">
+    <section class="section">
       <div class="container">
         <div class="head-row">
           <div class="section__head">
-            <p class="kicker reveal">02 / Featured work</p>
+            <p class="kicker reveal">04 / Featured work</p>
             <h2 class="reveal">Parts that <em>fly, heal</em> and move.</h2>
           </div>
           <a href="work.html" class="btn btn--ghost reveal">View full portfolio →</a>
@@ -209,7 +287,7 @@
     <section class="section" id="process">
       <div class="container">
         <div class="section__head">
-          <p class="kicker reveal">03 / Process</p>
+          <p class="kicker reveal">05 / Process</p>
           <h2 class="reveal">From CAD to dock in <em>four steps.</em></h2>
           <p class="section__lede reveal">A dedicated program manager owns your order end to end. You get real-time status, not radio silence.</p>
         </div>
@@ -222,11 +300,40 @@
       </div>
     </section>
 
+    <!-- ================= DELIVERABLES ================= -->
+    <section class="section section--alt">
+      <div class="container deliver">
+        <div>
+          <p class="kicker reveal">06 / Every order includes</p>
+          <h2 class="reveal" style="font-size:clamp(36px,4.6vw,60px)">More than parts <em>in a box.</em></h2>
+          <p class="section__lede reveal">Every Torvane order, from one prototype to a million-piece run, ships with the same documentation and visibility. No upsells, no extra fees.</p>
+          <div class="deliver__list" style="margin-top:36px">
+            <div class="dl reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5"/></svg><div><b>DFM report</b><span>Engineer markup on your model</span></div></div>
+            <div class="dl reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg><div><b>Named program manager</b><span>One person, direct line</span></div></div>
+            <div class="dl reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><div><b>Live order tracking</b><span>Every operation, in real time</span></div></div>
+            <div class="dl reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Certificate of Conformance</b><span>Signed by quality, every lot</span></div></div>
+            <div class="dl reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h4"/></svg><div><b>Material certs</b><span>Mill certs, traceable to heat</span></div></div>
+            <div class="dl reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/></svg><div><b>Inspection report</b><span>Critical dims, CMM on request</span></div></div>
+          </div>
+        </div>
+        <div class="portal reveal" aria-label="Example of the Torvane customer portal">
+          <div class="portal__bar"><i></i><i></i><i></i><span>portal.torvane.com / orders</span></div>
+          <div class="portal__body">
+            <div class="porder"><div><b>TV-2041 Bearing flange</b><small>Al 6061 · Qty 2,500</small></div><span class="pstatus pstatus--run">5-axis · Op 3/5</span><div class="pbar"><span style="width:62%"></span></div></div>
+            <div class="porder"><div><b>TV-1988 Actuator housing</b><small>Ti-6Al-4V · Qty 420</small></div><span class="pstatus pstatus--qc">CMM inspection</span><div class="pbar"><span style="width:86%"></span></div></div>
+            <div class="porder"><div><b>TV-2077 Battery tray</b><small>5052-H32 · Qty 1,200</small></div><span class="pstatus pstatus--ship">Shipped · UPS</span><div class="pbar"><span style="width:100%"></span></div></div>
+            <div class="porder"><div><b>TV-2102 Sensor bracket</b><small>17-4 PH · Qty 80</small></div><span class="pstatus pstatus--run">DFM approved</span><div class="pbar"><span style="width:18%"></span></div></div>
+            <div class="porder"><div><b>TV-2110 Gearbox cover</b><small>PA66-GF30 · Qty 10,000</small></div><span class="pstatus pstatus--qc">T1 samples</span><div class="pbar"><span style="width:40%"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= COMPARISON ================= -->
     <section class="section section--light">
       <div class="container">
         <div class="section__head section__head--center">
-          <p class="kicker reveal">04 / Why Torvane</p>
+          <p class="kicker reveal">07 / Why Torvane</p>
           <h2 class="reveal">Why engineering teams <em>switch to us.</em></h2>
         </div>
         <div class="compare reveal" role="table" aria-label="Torvane compared with alternatives">
@@ -254,7 +361,7 @@
     <section class="section">
       <div class="container">
         <div class="section__head">
-          <p class="kicker reveal">05 / Customers</p>
+          <p class="kicker reveal">08 / Customers</p>
           <h2 class="reveal">Engineers <em>don't switch back.</em></h2>
           <p class="section__lede reveal">94% customer retention. 4.9/5 average rating across 600+ verified reviews.</p>
         </div>
@@ -274,6 +381,25 @@
             <blockquote>"They scaled our busbars from 500 prototypes to 180k a year without a single line-down event. That's the whole job."</blockquote>
             <figcaption><span class="avatar">JT</span><span><b>Jonas Turner</b>Head of Hardware</span></figcaption>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESOURCES ================= -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="head-row">
+          <div class="section__head">
+            <p class="kicker reveal">09 / Design guides</p>
+            <h2 class="reveal">Design it right <em>the first time.</em></h2>
+            <p class="section__lede reveal">Free guides written by our manufacturing engineers. The same rules we use to review your parts.</p>
+          </div>
+          <a href="guides.html" class="btn btn--ghost reveal">All design guides →</a>
+        </div>
+        <div class="articles">
+          <a href="guides.html#cnc" class="article reveal"><div class="article__img"><img src="assets/img/endmill-dark.jpg" alt="" loading="lazy" /></div><div class="article__body"><span class="article__meta">CNC · 8 min read</span><h3>CNC design rules that cut cost by 30%</h3><p>Corner radii, wall thickness, hole depths and the tolerances that actually matter.</p><span class="article__go">Read the guide →</span></div></a>
+          <a href="guides.html#sheet" class="article reveal"><div class="article__img"><img src="assets/img/welding.jpg" alt="" loading="lazy" /></div><div class="article__body"><span class="article__meta">Sheet metal · 6 min read</span><h3>Sheet metal: bend radii, flanges and hole spacing</h3><p>The numbers to design to so your parts form flat, square and on the first try.</p><span class="article__go">Read the guide →</span></div></a>
+          <a href="guides.html#tolerances" class="article reveal"><div class="article__img"><img src="assets/img/caliper-digital.jpg" alt="" loading="lazy" /></div><div class="article__body"><span class="article__meta">Tolerancing · 5 min read</span><h3>How tight is too tight? A tolerance cost guide</h3><p>What each decimal place costs you, and where standard tolerances are fine.</p><span class="article__go">Read the guide →</span></div></a>
         </div>
       </div>
     </section>
@@ -311,6 +437,7 @@
         <a href="work.html">Our work</a>
         <a href="industries.html">Industries</a>
         <a href="quality.html">Quality &amp; certifications</a>
+        <a href="guides.html">Design guides</a>
         <a href="about.html">About &amp; careers</a>
         <a href="quote.html#faq">FAQ</a>
       </div>
